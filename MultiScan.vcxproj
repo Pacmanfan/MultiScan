@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F6CDEB6C-62D4-4BB6-9138-63C60436C375}</ProjectGuid>
+    <RootNamespace>MultiScan</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>e:\PROJECTS\3dscanner\MultiScan\Scanner3dLib;C:\opencv\build\include\;C:\opencv\build\include\opencv2;C:\opencv\build\include\opencv;e:\PROJECTS\3dscanner\MultiScan\StructuredLight;e:\PROJECTS\3dscanner\MultiScan\Scanner3d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_calib3d231.lib;opencv_contrib231.lib;opencv_core231.lib;opencv_features2d231.lib;opencv_flann231.lib;opencv_gpu231.lib;opencv_haartraining_engine.lib;opencv_highgui231.lib;opencv_imgproc231.lib;opencv_legacy231.lib;opencv_ml231.lib;opencv_objdetect231.lib;opencv_ts231.lib;opencv_video231.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\opencv\build\x86\vc9\lib;E:\3dscanner\Scanner3d\Scanner3dLib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Scanner3dLib\Camera.cpp" />
+    <ClCompile Include="Scanner3dLib\CameraCalibration.cpp" />
+    <ClCompile Include="Scanner3dLib\Color.cpp" />
+    <ClCompile Include="Scanner3d\DibFromIplImage.cpp" />
+    <ClCompile Include="Scanner3d\dlgCameraCalibration.cpp" />
+    <ClCompile Include="Scanner3d\dlgCornerConfig.cpp" />
+    <ClCompile Include="Scanner3d\dlgPostProcess.cpp" />
+    <ClCompile Include="Scanner3d\dlgSingleConfig.cpp" />
+    <ClCompile Include="Scanner3dLib\ImProc.cpp" />
+    <ClCompile Include="Scanner3dLib\LeastSquares.cpp" />
+    <ClCompile Include="Scanner3dLib\Log.cpp" />
+    <ClCompile Include="Scanner3dLib\Math3d.cpp" />
+    <ClCompile Include="Scanner3dLib\plane.cpp" />
+    <ClCompile Include="Scanner3dLib\Point3d.cpp" />
+    <ClCompile Include="Scanner3dLib\PostProcessor.cpp" />
+    <ClCompile Include="Scanner3dLib\RTUtil.cpp" />
+    <ClCompile Include="Scanner3d\Scanner3d.cpp" />
+    <ClCompile Include="Scanner3d\Scanner3dDlg.cpp" />
+    <ClCompile Include="Scanner3dLib\scanner3dlib.cpp" />
+    <ClCompile Include="Scanner3dLib\ScannerAlg.cpp" />
+    <ClCompile Include="Scanner3dLib\ScannerAlgCorner.cpp" />
+    <ClCompile Include="Scanner3dLib\ScannerAlgSingle.cpp" />
+    <ClCompile Include="Scanner3dLib\ScannerConfig.cpp" />
+    <ClCompile Include="Scanner3dLib\ScannerConfigCorner.cpp" />
+    <ClCompile Include="Scanner3dLib\ScannerConfigSingle.cpp" />
+    <ClCompile Include="Scanner3dLib\ScannerFrame.cpp" />
+    <ClCompile Include="Scanner3d\stdafx.cpp" />
+    <ClCompile Include="StructuredLight\cvCalibrateProCam.cpp" />
+    <ClCompile Include="StructuredLight\cvScanProCam.cpp" />
+    <ClCompile Include="StructuredLight\cvStructuredLight.cpp" />
+    <ClCompile Include="StructuredLight\cvUtilProCam.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Scanner3dLib\Camera.h" />
+    <ClInclude Include="Scanner3dLib\CameraCalibration.h" />
+    <ClInclude Include="Scanner3dLib\Color.h" />
+    <ClInclude Include="Scanner3dLib\DELAUNAY.HPP" />
+    <ClInclude Include="Scanner3d\DibFromIplImage.h" />
+    <ClInclude Include="Scanner3d\dlgCameraCalibration.h" />
+    <ClInclude Include="Scanner3d\dlgCornerConfig.h" />
+    <ClInclude Include="Scanner3d\dlgPostProcess.h" />
+    <ClInclude Include="Scanner3d\dlgSingleConfig.h" />
+    <ClInclude Include="Scanner3dLib\ImProc.h" />
+    <ClInclude Include="Scanner3dLib\LeastSquares.h" />
+    <ClInclude Include="Scanner3dLib\ListItem.h" />
+    <ClInclude Include="Scanner3dLib\Log.h" />
+    <ClInclude Include="Scanner3dLib\Math3d.h" />
+    <ClInclude Include="Scanner3dLib\PLANE.H" />
+    <ClInclude Include="Scanner3dLib\Point3d.hpp" />
+    <ClInclude Include="Scanner3dLib\PostProcessor.h" />
+    <ClInclude Include="Scanner3d\resource.h" />
+    <ClInclude Include="Scanner3dLib\RTUtil.hpp" />
+    <ClInclude Include="Scanner3d\Scanner3d.h" />
+    <ClInclude Include="Scanner3d\Scanner3dDlg.h" />
+    <ClInclude Include="Scanner3dLib\scanner3dlib.h" />
+    <ClInclude Include="Scanner3dLib\ScannerAlg.h" />
+    <ClInclude Include="Scanner3dLib\ScannerAlgCorner.h" />
+    <ClInclude Include="Scanner3dLib\ScannerAlgSingle.h" />
+    <ClInclude Include="Scanner3dLib\ScannerConfig.h" />
+    <ClInclude Include="Scanner3dLib\ScannerConfigCorner.h" />
+    <ClInclude Include="Scanner3dLib\ScannerConfigSingle.h" />
+    <ClInclude Include="Scanner3dLib\ScannerFrame.h" />
+    <ClInclude Include="Scanner3d\stdafx.h" />
+    <ClInclude Include="Scanner3dLib\Vector3d.hpp" />
+    <ClInclude Include="StructuredLight\cvCalibrateProCam.h" />
+    <ClInclude Include="StructuredLight\cvScanProCam.h" />
+    <ClInclude Include="StructuredLight\cvStructuredLight.h" />
+    <ClInclude Include="StructuredLight\cvUtilProCam.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scanner3d\res\Scanner3d.ico" />
+    <None Include="Scanner3d\Scanner3d.ico" />
+    <None Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Scanner3d\Scanner3d.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Scanner3d\Scanner3d.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

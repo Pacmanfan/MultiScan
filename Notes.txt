@@ -1,0 +1,52 @@
+Image processing used to determine the laser line:
+
+use a spatial - temporal approach
+
+Using 2 successive frames, determine the laser line as such:
+
+f1 is the first color frame with laser line
+f2 is the successive color frame with laser line 
+
+convert f1 to greyscale
+f1->gf1
+
+convert f2 to greyscale
+f2->gf2
+
+Begin by converting the video to grayscale (if a color camera was used),
+and evaluate the maximum and minimum brightness observed at each
+camera pixel c = (x; y) over the stick-waving / laser line sequence
+
+Imax(x,y) = maxI(x,y,t)
+Imin(x,y) = minI(x,y,t)
+
+alg:
+
+Imin is the minimum image
+Imax is the maximum image
+
+for(y = 0 ; y < height; y++)
+{
+	for(x = 0 ; x < width; y++)
+	{		
+		Imin(x,y) = min(f1(x,y),f2(x,y)
+		Imax(x,y) = max(f1(x,y),f2(x,y)
+	}
+}
+
+
+To detect the shadow boundaries, choose a per-pixel detection threshold
+which is the midpoint of the dynamic range observed in each pixel. With
+this threshold, the shadow edge can be localized by the zero crossings of
+the difference image
+
+delta_I(x,y,t) = I - I_shadow(x,y)
+
+where the shadow threshold image is defined by:
+
+I_shadow(x,y) = ((Imax(x,y) + Imin(x,y))/2)
+
+In practice, you’ll need to select an occlusion-free image patch for each planar region.
+ Afterwards, a set of sub-pixel shadow edge samples (for each row of the patch) are obtained 
+ by interpolating the position of the zerocrossings of delta_I(x, y, t)
+

@@ -1,0 +1,24 @@
+ToDo:
+*- Use the opencv "canny" image processing algorithm on the diff image to better determine the features
+ - Have multiple ways to calculate the laser plane
+	-Top back plane only (25 pix or so)
+	-Top back / bottom desk plan
+	-left / right sides
+*- View option for diff-canny
+-diff canny / threshold options
+- Open GL viewer
+	move / orbit camera
+	zoom in / out
+	view points
+- Automatic camera placement using chessboard
+- Automatic desk / backplane placement using chessboard
+- Camera calibration and image correction
+*- Make the Scanner and the configuration for it global
+*	-Library interface to setup / teardown
+
+Post Processing
+	-Option to remove back / desk plane points
+*	-An X * Y bucket list that is used to group and average points
+	 that project to the same 2d screen coordinates
+	-Delauney triangulation
+	-better export options

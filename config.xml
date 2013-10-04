@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<output>
+  <output_directory>""</output_directory>
+  <object_name>""</object_name>
+  <save_intermediate_results>0</save_intermediate_results></output>
+<camera>
+  <width>0</width>
+  <height>0</height>
+  <Logitech_Quickcam_9000_raw_mode>0</Logitech_Quickcam_9000_raw_mode></camera>
+<projector>
+  <width>0</width>
+  <height>0</height>
+  <invert_projector>0</invert_projector></projector>
+<gain>
+  <camera_gain>0</camera_gain>
+  <projector_gain>0</projector_gain></gain>
+<distortion_model>
+  <enable_tangential_camera>0</enable_tangential_camera>
+  <enable_6th_order_radial_camera>0</enable_6th_order_radial_camera>
+  <enable_tangential_projector>0</enable_tangential_projector>
+  <enable_6th_order_radial_projector>0</enable_6th_order_radial_projector></distortion_model>
+<camera_chessboard>
+  <interior_horizontal_corners>0</interior_horizontal_corners>
+  <interior_vertical_corners>0</interior_vertical_corners>
+  <square_width_mm>0.</square_width_mm>
+  <square_height_mm>0.</square_height_mm></camera_chessboard>
+<projector_chessboard>
+  <interior_horizontal_corners>0</interior_horizontal_corners>
+  <interior_vertical_corners>0</interior_vertical_corners>
+  <square_width_pixels>0</square_width_pixels>
+  <square_height_pixels>0</square_height_pixels></projector_chessboard>
+<scanning_and_reconstruction>
+  <mode>0</mode>
+  <reconstruct_columns>0</reconstruct_columns>
+  <reconstruct_rows>0</reconstruct_rows>
+  <frame_delay_ms>0</frame_delay_ms>
+  <minimum_contrast_threshold>0</minimum_contrast_threshold>
+  <minimum_distance_mm>0.</minimum_distance_mm>
+  <maximum_distance_mm>0.</maximum_distance_mm>
+  <maximum_distance_variation_mm>0.</maximum_distance_variation_mm>
+  <minimum_background_distance_mm>0.</minimum_background_distance_mm></scanning_and_reconstruction>
+<visualization>
+  <display_intermediate_results>0</display_intermediate_results>
+  <display_window_width_pixels>0</display_window_width_pixels></visualization>
+</opencv_storage>
